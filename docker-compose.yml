@@ -1,0 +1,7 @@
+services:
+  ml_wiki:
+    build: .
+    container_name: ml_wiki
+    ports:
+      - "8080:80"
+    restart: always
