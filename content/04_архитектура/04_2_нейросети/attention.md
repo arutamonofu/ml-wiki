@@ -3,7 +3,7 @@ title: Attention
 aliases:
   - Механизм внимания
 ---
-Механизм внимания (Attention) — блок нейросети, агрегирующий векторы значений (Values) с весами релевантности их ключей (Keys) текущему запросу (Query).
+Механизм внимания (attention) — блок нейросети, агрегирующий векторы значений (Values) с весами релевантности их ключей (Keys) текущему запросу (Query).
 
 | Свойство     | Описание                                                                                                                                                                   |
 | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -19,9 +19,9 @@ aliases:
 > 
 > Функции сходства $\operatorname{Score}(\mathbf{q}, \mathbf{k})$:
 > 
-> - Аддитивная (Bahdanau): $\operatorname{Score}(\mathbf{q}, \mathbf{k}) = \mathbf{v}_a^\top \tanh(\mathbf{W}_q \mathbf{q}^\top + \mathbf{W}_k \mathbf{k}^\top)$
-> - Мультипликативная (Luong): $\operatorname{Score}(\mathbf{q}, \mathbf{k}) = \mathbf{q} \mathbf{W}_a \mathbf{k}^\top$
-> - Скалярное произведение (Vaswani, $d_q = d_k$): $\operatorname{Score}(\mathbf{q}, \mathbf{k}) = \frac{\mathbf{q} \mathbf{k}^\top}{\sqrt{d_k}}$
+> - Аддитивная (Bahdanau): $\operatorname{Score}(\mathbf{q}, \mathbf{k}) = \mathbf{v}_a^\top \tanh(\mathbf{W}_q \mathbf{q}^\top + \mathbf{W}_k \mathbf{k}^\top)$;
+> - Мультипликативная (Luong): $\operatorname{Score}(\mathbf{q}, \mathbf{k}) = \mathbf{q} \mathbf{W}_a \mathbf{k}^\top$;
+> - Скалярное произведение (Vaswani, $d_q = d_k$): $\operatorname{Score}(\mathbf{q}, \mathbf{k}) = \frac{\mathbf{q} \mathbf{k}^\top}{\sqrt{d_k}}$.
 > 
 > Проекции Self-Attention ($\mathbf{X} \in \mathbb{R}^{T \times d_{\text{in}}}$, $T_Q = T_K = T$):
 > 

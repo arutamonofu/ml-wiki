@@ -15,18 +15,14 @@ DBSCAN — плотностный алгоритм кластеризации, �
 > 
 > Типы объектов:
 > 
-> - Корневой: $|N_\varepsilon(\boldsymbol{x}_i)| \ge m$ (множество $\mathbf{X}_\text{core}$)
-> 
-> - Пограничный: $|N_\varepsilon(\boldsymbol{x}_i)| < m$, но $\exists \boldsymbol{x}_c \in \mathbf{X}_\text{core} : \boldsymbol{x}_i \in N_\varepsilon(\boldsymbol{x}_c)$
-> 
-> - Шумовой: не корневой и не пограничный
+> - Корневой: $|N_\varepsilon(\boldsymbol{x}_i)| \ge m$ (множество $\mathbf{X}_\text{core}$);
+> - Пограничный: $|N_\varepsilon(\boldsymbol{x}_i)| < m$, но $\exists \boldsymbol{x}_c \in \mathbf{X}_\text{core} : \boldsymbol{x}_i \in N_\varepsilon(\boldsymbol{x}_c)$;
+> - Шумовой: не корневой и не пограничный.
 > 
 > Достижимость и связность:
 > 
 > 1. $\boldsymbol{x}_j$ прямо плотностно достижим из $\boldsymbol{x}_i$, если $\boldsymbol{x}_i \in \mathbf{X}_\text{core}$ и $\boldsymbol{x}_j \in N_\varepsilon(\boldsymbol{x}_i)$.
-> 
 > 2. $\boldsymbol{x}_j$ плотностно достижим из $\boldsymbol{x}_i$, если есть цепочка $\boldsymbol{x}_i = \boldsymbol{p}_1, \dots, \boldsymbol{p}_k = \boldsymbol{x}_j$, где $\boldsymbol{p}_{l+1}$ прямо достижим из $\boldsymbol{p}_l$.
-> 
 > 3. $\boldsymbol{x}_i$ и $\boldsymbol{x}_j$ плотностно связаны, если $\exists \boldsymbol{x}_o \in \mathbf{X}_\text{core}$, из которого они плотностно достижимы.
 > 
 > Кластер $C_k$ — максимальное множество плотностно-связанных объектов:
@@ -67,12 +63,12 @@ $$\hat{y}_\text{new} = \begin{cases} \operatorname{label}(\boldsymbol{x}_c^*), &
 
 Достоинства:
 
-- Произвольная форма кластеров и автоопределение их количества
-- Явная фильтрация шума
-- Простая геометрическая интерпретация
+- Произвольная форма кластеров и автоопределение их количества;
+- Явная фильтрация шума;
+- Простая геометрическая интерпретация.
 
 Недостатки:
 
-- Чувствительность к [[масштабирование|масштабу признаков]] и метрике
-- Деградация в высокой размерности ($d \gg 1$) и при переменной плотности
-- Сложный подбор $\varepsilon$ и $m$
+- Чувствительность к [[масштабирование|масштабу признаков]] и метрике;
+- Деградация в высокой размерности ($d \gg 1$) и при переменной плотности;
+- Сложный подбор $\varepsilon$ и $m$.

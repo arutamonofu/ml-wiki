@@ -24,15 +24,11 @@ aliases:
 > 
 > Обозначения:
 > 
-> - $\mathbf{X} = [\boldsymbol{x}_1, \dots, \boldsymbol{x}_T]^\top \in \mathbb{R}^{T \times d_{\text{in}}}$ — матрица входа из векторов $\boldsymbol{x}_t \in \mathbb{R}^{d_{\text{in}}}$
-> 
-> - $\boldsymbol{h}_t \in \mathbb{R}^{d_h}$ — вектор скрытого состояния ($\boldsymbol{h}_0 = \boldsymbol{0}$)
-> 
-> - $\mathbf{W}_{xh} \in \mathbb{R}^{d_h \times d_{\text{in}}}, \mathbf{W}_{hh} \in \mathbb{R}^{d_h \times d_h}, \mathbf{W}_{hy} \in \mathbb{R}^{d_{\text{out}} \times d_h}$ — матрицы весов
-> 
-> - $\boldsymbol{b}_h \in \mathbb{R}^{d_h}, \boldsymbol{b}_y \in \mathbb{R}^{d_{\text{out}}}$ — векторы смещений
-> 
-> - $\sigma(\cdot)$ — поэлементная активация (обычно $\tanh$)
+> - $\mathbf{X} = [\boldsymbol{x}_1, \dots, \boldsymbol{x}_T]^\top \in \mathbb{R}^{T \times d_{\text{in}}}$ — матрица входа из векторов $\boldsymbol{x}_t \in \mathbb{R}^{d_{\text{in}}}$;
+> - $\boldsymbol{h}_t \in \mathbb{R}^{d_h}$ — вектор скрытого состояния ($\boldsymbol{h}_0 = \boldsymbol{0}$);
+> - $\mathbf{W}_{xh} \in \mathbb{R}^{d_h \times d_{\text{in}}}, \mathbf{W}_{hh} \in \mathbb{R}^{d_h \times d_h}, \mathbf{W}_{hy} \in \mathbb{R}^{d_{\text{out}} \times d_h}$ — матрицы весов;
+> - $\boldsymbol{b}_h \in \mathbb{R}^{d_h}, \boldsymbol{b}_y \in \mathbb{R}^{d_{\text{out}}}$ — векторы смещений;
+> - $\sigma(\cdot)$ — поэлементная активация (обычно $\tanh$).
 > 
 > Расчет обновления на шаге $t$:
 > 
