@@ -110,6 +110,10 @@ plugins:
     order: 92
   - source: "@quartz-community/quartz-fonts"
     enabled: true
+    options:
+      body: "Inter"
+      header: "Manrope"
+      code: "JetBrains Mono"
   - source: "@quartz-themes/core"
     enabled: true
     options:
